@@ -26,6 +26,7 @@ alias remoteSnowy="ssh fz16289@snowy.cs.bris.ac.uk"
 PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
 export PATH
 
+git pull
 
 
 
