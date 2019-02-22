@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/fabianzachs/Documents/University/SecondYear/ConcurrentComputing/Week1/SampleCode'
+let g:netrw_dirhist_2='/private/etc'
+let g:netrw_dirhist_3='/Users/fabianzachs/Documents/University/SecondYear/Symbols, Patterns and Signals/Labs'
+let g:netrw_dirhist_4='scp://fz16289@snowy.cs.bris.ax.uk/'
