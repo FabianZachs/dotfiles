@@ -18,6 +18,7 @@ alias py="python3"
 
 alias tmux="TERM=screen-256color-bce tmux"
 alias remoteSnowy="ssh fz16289@snowy.cs.bris.ac.uk"
+alias remoteLab="ssh it000436.users.bris.ac.uk"
 
 
 
