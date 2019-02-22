@@ -1,5 +1,7 @@
 #git clone https://github.com/FabianZachs/dotfiles.git
 
+chsh -s $(whereis zsh)
+
 rsync -a dotfiles/ ~
 rm -rf dotfiles/
 #
