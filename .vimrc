@@ -70,16 +70,37 @@ let g:ale_python_flake8_executable = 'python3'
 
 " NERDTREE
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeMapOpenVSplit='<C-V>'
+let NERDTreeMapOpenSplit='<C-X>'
 
-
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 " easymotion config
 map <Leader> <Plug>(easymotion-prefix)
+
+
+" fzf
+set rtp+=~/.fzf
+nnoremap <c-p> :FZF<cr>
+
+
+
+" FZF
+" ctrl-p   open FZF
+" ctrl-<vim motion> go between selection
+" enter     open in current window
+" ctrl-T    open in new tab
+" ctrl-X    horizontal split
+" ctrl-V    vertical split
+
+
+" NERDTREE
+" ctrl-n    open NERDTREE
+" ctrl-X    horizontal split
+" ctrl-V    vertical split
+
+
+" EASYMOTION
+" ,s   easy-motion movement
 " ,w to search all words
 " ,f _ to search for specific letter below cursor
 " ,F _ to search for specific letter above cursor
