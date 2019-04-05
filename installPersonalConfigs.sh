@@ -7,6 +7,7 @@
 # fzf :
 # git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 #~/.fzf/install
+# ctags? https://www.youtube.com/watch?v=4f3AENLrdYo
 
 
 chsh -s $(whereis zsh)

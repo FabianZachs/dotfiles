@@ -14,7 +14,7 @@ export ZSH=$HOME/.oh-my-zsh
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="dallas"
+ZSH_THEME="avit"
 
 
 alias c="clear"
@@ -23,7 +23,7 @@ alias py="python3"
 
 alias tmux="TERM=screen-256color-bce tmux"
 alias remoteSnowy="ssh fz16289@snowy.cs.bris.ac.uk"
-alias remoteLab="ssh it000436.users.bris.ac.uk"
+alias remoteLab="ssh it000436.wks.bris.ac.uk"
 
 
 
@@ -32,8 +32,9 @@ alias remoteLab="ssh it000436.users.bris.ac.uk"
 PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
 export PATH
 
-#git pull
 
+# for gruvbox more contrasting colors
+source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 
 
 
@@ -90,9 +91,10 @@ export PATH
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-plugins=(zsh-autosuggestions)
-plugins=(zsh-syntax-highlighting)
+
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+
+
 
 
 source $ZSH/oh-my-zsh.sh

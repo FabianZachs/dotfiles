@@ -45,6 +45,8 @@ Plugin 'w0rp/ale'
 Plugin 'Raimondi/delimitMate'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
+Plugin 'itchyny/lightline.vim'
+Plugin 'pseewald/vim-anyfold'
 " END OF MY PLUGINS
 " ---------------------------------------------------------------------
 
@@ -55,14 +57,15 @@ filetype plugin indent on    " required
 " END OF  VUNDLE
 " =====================================================================
 
+set termguicolors
 let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_italic = 0
+let g:gruvbox_italic = 1
 let g:gruvbox_bold = 1
-"colorscheme gruvbox
-colorscheme snazzy
+colorscheme gruvbox
+"colorscheme snazzy
 let g:SnazzyTransparent = 1
 " line in bashrc for text color
-"set background=dark
+set background=dark
 set t_Co=256
 
 "ale
@@ -72,6 +75,7 @@ let g:ale_python_flake8_executable = 'python3'
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeMapOpenVSplit='<C-V>'
 let NERDTreeMapOpenSplit='<C-X>'
+let NERDTreeIgnore=['\.pyc$', '\.o$'] "ignore files in NERDTree
 
 
 " easymotion config
@@ -82,6 +86,21 @@ map <Leader> <Plug>(easymotion-prefix)
 set rtp+=~/.fzf
 nnoremap <c-p> :FZF<cr>
 
+
+" lightline
+set laststatus=2
+set noshowmode
+
+" anyfold
+autocmd Filetype * AnyFoldActivate               " activate for all filetypes
+set foldlevel=99 " Open all folds
+nnoremap <space> za  
+" Enable folding with the spacebar
+
+
+
+" https://alexpearce.me/2014/05/italics-in-iterm2-vim-tmux/#tmux-21-and-above
+highlight Comment cterm=italic
 
 
 " FZF
