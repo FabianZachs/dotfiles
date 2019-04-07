@@ -16,10 +16,10 @@ set incsearch " search as characters are entered
 set hlsearch  " highlight matches
 
 " split navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+"nnoremap <C-J> <C-W><C-J>
+"nnoremap <C-K> <C-W><C-K>
+"nnoremap <C-L> <C-W><C-L>
+"nnoremap <C-H> <C-W><C-H>
 
 " Remapping my leader
 let mapleader=","
@@ -47,6 +47,8 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
 Plugin 'itchyny/lightline.vim'
 Plugin 'pseewald/vim-anyfold'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'benmills/vimux'
 " END OF MY PLUGINS
 " ---------------------------------------------------------------------
 
@@ -90,17 +92,44 @@ nnoremap <c-p> :FZF<cr>
 " lightline
 set laststatus=2
 set noshowmode
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
 
-" anyfold
+" anyfold http://vimcasts.org/episodes/how-to-fold/
 autocmd Filetype * AnyFoldActivate               " activate for all filetypes
 set foldlevel=99 " Open all folds
 nnoremap <space> za  
+" zc closes parent fold
+" zR	open all folds
+" zM	close all folds
+" zj    move to above fold
+" zk    move to below fold
 " Enable folding with the spacebar
 
 
+" ctags
+" Ctrl-] 			 Jump to the tag underneath the cursor
+" :ts <tag> <RET>    Search for a particular tag
+" :tn   			 Go to the next definition for the last tag
+" :tp   			 Go to the previous definition for the last tag
+" :ts     		     List all of the definitions of the last tag
+" Ctrl-t  			 Jump back up in the tag stack
 
 " https://alexpearce.me/2014/05/italics-in-iterm2-vim-tmux/#tmux-21-and-above
 highlight Comment cterm=italic
+
+
+" VIMUX
+" Prompt for a command to run https://blog.bugsnag.com/tmux-and-vim/
+map <Leader>vp :VimuxPromptCommand<CR>
+" Run last command executed by VimuxRunCommand
+map <Leader>vl :VimuxRunLastCommand<CR>
+" Inspect runner pane
+map <Leader>vi :VimuxInspectRunner<CR>
+" Zoom the tmux runner pane          can exit with movement back up. So Ctrl-k
+map <Leader>vz :VimuxZoomRunner<CR>
+
 
 
 " FZF

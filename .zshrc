@@ -7,14 +7,12 @@ export ZSH=$HOME/.oh-my-zsh
 
 
 
-
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="avit"
+ZSH_THEME="agnoster"
 
 
 alias c="clear"
@@ -24,6 +22,8 @@ alias py="python3"
 alias tmux="TERM=screen-256color-bce tmux"
 alias remoteSnowy="ssh fz16289@snowy.cs.bris.ac.uk"
 alias remoteLab="ssh it000436.wks.bris.ac.uk"
+alias createTagsGit="ctags -R -f ./.git/tags ."
+alias createTags="ctags -R *"
 
 
 
