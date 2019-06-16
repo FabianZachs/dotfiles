@@ -18,6 +18,8 @@ ZSH_THEME="agnoster"
 alias c="clear"
 alias q="exit"
 alias py="python3"
+alias vimrc="vim ~/.vimrc"
+alias zshrc="vim ~/.zshrc"
 
 alias tmux="TERM=screen-256color-bce tmux"
 alias remoteSnowy="ssh fz16289@snowy.cs.bris.ac.uk"
@@ -25,7 +27,14 @@ alias remoteLab="ssh it000436.wks.bris.ac.uk"
 alias createTagsGit="ctags -R -f ./.git/tags ."
 alias createTags="ctags -R *"
 
-
+# include z
+. /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
+#       -c     restrict matches to subdirectories of the current directory
+#       -h     show a brief help message
+#       -l     list only
+#       -r     match by rank only
+#       -t     match by recent access only
+#       -x     remove the current directory from the datafile
 
 # Setting PATH for Python 3.7
 # The original version is saved in .bash_profile.pysave
