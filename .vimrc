@@ -29,32 +29,24 @@ let mapleader=","
 " VUNDLE SPECIFIC SETTINGS 
 
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " ---------------------------------------------------------------------
 " MY PLUGINS
-Plugin 'morhetz/gruvbox'
-Plugin 'connorholyday/vim-snazzy'
-Plugin 'w0rp/ale'
-Plugin 'Raimondi/delimitMate'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'scrooloose/nerdtree'
-Plugin 'itchyny/lightline.vim'
-Plugin 'pseewald/vim-anyfold'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'benmills/vimux'
+Plug 'morhetz/gruvbox'
+Plug 'connorholyday/vim-snazzy'
+Plug 'w0rp/ale'
+Plug 'Raimondi/delimitMate'
+Plug 'easymotion/vim-easymotion'
+Plug 'scrooloose/nerdtree'
+Plug 'itchyny/lightline.vim'
+Plug 'pseewald/vim-anyfold'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'benmills/vimux'
 " END OF MY PLUGINS
 " ---------------------------------------------------------------------
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
 
 " END OF  VUNDLE
 " =====================================================================
