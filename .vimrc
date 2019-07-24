@@ -26,7 +26,7 @@ let mapleader=","
 
 
 " =====================================================================
-" VUNDLE SPECIFIC SETTINGS 
+" plug.vim SPECIFIC SETTINGS 
 
 
 call plug#begin('~/.vim/plugged')
@@ -43,13 +43,19 @@ Plug 'itchyny/lightline.vim'
 Plug 'pseewald/vim-anyfold'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'benmills/vimux'
+Plug 'ternjs/tern_for_vim', {'do' : 'npm install'}
 " END OF MY PLUGINS
 " ---------------------------------------------------------------------
 
 call plug#end()
 
-" END OF  VUNDLE
+" END OF plug.vim
 " =====================================================================
+
+" == AUTOCOMPLETE ==
+" https://medium.com/vim-drops/javascript-autocompletion-on-vim-4fea7f6934e2
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 
 set termguicolors
 let g:gruvbox_contrast_dark = 'hard'
