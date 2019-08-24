@@ -1,6 +1,8 @@
 set expandtab
-set shiftwidth=4
-set softtabstop=4 " number of spaces in tab when editing
+"set shiftwidth=4
+"set softtabstop=4 " number of spaces in tab when editing
+set shiftwidth=2
+set softtabstop=2 " number of spaces in tab when editing
 syntax on
 set autoread
 set number " line numbers
@@ -44,6 +46,8 @@ Plug 'pseewald/vim-anyfold'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'benmills/vimux'
 Plug 'ternjs/tern_for_vim', {'do' : 'npm install'}
+Plug 'tomasr/molokai'
+Plug 'ycm-core/YouCompleteMe'
 " END OF MY PLUGINS
 " ---------------------------------------------------------------------
 
@@ -57,12 +61,12 @@ call plug#end()
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
-set termguicolors
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_italic = 1
-let g:gruvbox_bold = 1
-colorscheme gruvbox
+"let g:gruvbox_contrast_dark = 'hard'
+"let g:gruvbox_italic = 1
+"let g:gruvbox_bold = 1
+"colorscheme gruvbox
 "colorscheme snazzy
+"colorscheme molokai
 let g:SnazzyTransparent = 1
 " line in bashrc for text color
 set background=dark
@@ -128,6 +132,7 @@ map <Leader>vi :VimuxInspectRunner<CR>
 " Zoom the tmux runner pane          can exit with movement back up. So Ctrl-k
 map <Leader>vz :VimuxZoomRunner<CR>
 
+colorscheme molokai
 
 
 " FZF

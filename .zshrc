@@ -21,7 +21,10 @@ alias py="python3"
 alias vimrc="vim ~/.vimrc"
 alias zshrc="vim ~/.zshrc"
 
+#alias tmux="TERM=screen-256color-bce tmux"
 alias tmux="TERM=screen-256color-bce tmux"
+set -g default-terminal "screen-256color" 
+
 alias remoteSnowy="ssh fz16289@snowy.cs.bris.ac.uk"
 alias remoteLab="ssh it000436.wks.bris.ac.uk"
 alias createTagsGit="ctags -R -f ./.git/tags ."
@@ -43,7 +46,7 @@ export PATH
 
 
 # for gruvbox more contrasting colors
-source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
+# source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 
 
 
